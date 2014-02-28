@@ -11,6 +11,6 @@
  *= require_self
  *= require_tree .
  */
-#one {
-  margin-top: 70px;
+.main {
+  margin-top: 60px;
 }
