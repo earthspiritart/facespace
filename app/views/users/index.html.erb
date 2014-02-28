@@ -1,0 +1,19 @@
+<h1>FaceSpace Users</h1>
+
+<% @users.each do |user| %>
+
+<div class="media">
+  <a class="pull-left" href="#">
+    <%= image_tag(gravatar_url(user.email), class: "media-object") %>
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading"><%= user.name %></h4>
+    ...
+ 
+    <!-- Nested media object -->
+    <div class="media">
+      ...
+    </div>
+  </div>
+</div>
+  <% end %>
