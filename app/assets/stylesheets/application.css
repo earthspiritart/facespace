@@ -7,12 +7,20 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
+ *= require bootstrap_and_overrides
  *= require_self
- *= require_tree .
+
  */
 .main {
   margin-top: 60px;
   background: #d6e6d6;
+  }
+.first {
+
   box-shadow: 5px 5px purple 5px;
-}
+  width: 90%;
+  }
+
+
+
+
