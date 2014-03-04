@@ -8,6 +8,7 @@ Facespace::Application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  config.action_mailer.delivery_method = :letter_opener
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -27,5 +28,6 @@ Facespace::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-
+  config.action_controller.asset_host = "http://localhost:3000"
+  config.action_mailer.asset_host = "http://localhost:3000"
 end

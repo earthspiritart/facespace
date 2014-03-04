@@ -39,6 +39,7 @@ end
 
 group :development do
 gem "ffaker"
+gem "letter_opener"
 end
 
 group :production do
