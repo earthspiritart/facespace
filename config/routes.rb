@@ -4,7 +4,9 @@ Facespace::Application.routes.draw do
   resources :users, only: [:index] 
   root "static#index"
 
-   get "/newsletter" => "static#newsletter"
+  match "/contact" => "static#contact", via: [:get, :post]
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
