@@ -1,10 +1,17 @@
 <h1 class="page-header">Contact Page</h1>
 
 
-  <%= form_tag(contact_path) do %>
-  
-  <%= text_field_tag(:name, " ", placeholder: "Name" ) %>
-  <%= email_field_tag(:email, " ", placeholder: "Email" ) %>
-  <%= text_area_tag(:question, " ", placeholder: "Question" ) %>  
-  <%= submit_tag("Submit" class="btn btn-sucess") %>
-  <% end %>
+  <%= form_for(@contact, url: contact_path) do |f| %>
+  <div class="control-group">
+    <%= f.text_field(:name, placeholder: "Name" ) %>
+  </div>
+  <div class="control-group">
+    <%= f.email_field(:email, placeholder: "Email" ) %>
+  </div>
+  <div class="control-group">
+   <%= f.text_area(:question,  placeholder: "Question" ) %>  
+  </div>
+  <div class="control-group">
+    <%= f.submit("Submit") %>
+  </div>
+    <% end %>

@@ -3,8 +3,8 @@ class AdminMailer < ActionMailer::Base
   default to: "me@facespace.com"
 
 
-  def contact_form(params)
-    @params = params
+  def contact_form(contact)
+    @params = contact
     mail(subject: "New Contact form Submission")
   end
 
