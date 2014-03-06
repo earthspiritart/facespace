@@ -9,4 +9,9 @@ class AdminMailer < ActionMailer::Base
   end
 
 
+  def newsletter(params)
+    @params = params
+    mail(subject: "Newsletter")
+  end
+
 end

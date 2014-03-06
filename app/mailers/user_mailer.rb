@@ -8,8 +8,8 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: "Welcome to Facespace")
   end
 
-  def newsletter(user)
-    @user = user
-    mail(to: @user.email, subject: "Newsletter")
+  def newsletter(params)
+    @params = params
+    mail(to: @params[:email], subject: "Newsletter")
   end
 end

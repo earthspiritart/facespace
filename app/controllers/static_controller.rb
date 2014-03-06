@@ -16,6 +16,15 @@ class StaticController < ApplicationController
       end
     end
   end
+
+  def newsletter
+    if request.post?
+      UserMailer.newsletter(params).deliver
+      AdminMailer.newsletter(params).deliver
+    end
+  end
+
+
   private
 
   def contact_params
